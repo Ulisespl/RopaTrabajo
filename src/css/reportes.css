@@ -1,0 +1,19 @@
+@media screen {
+.btn-reporte
+{
+	border: none;
+	background-color: transparent;
+	color: white;
+	cursor: pointer;
+}
+
+.btn-reporte:hover
+{
+	font-weight: bold;
+}
+
+.scicc-input-busqueda.normal
+{
+	width: auto !important;
+}
+}

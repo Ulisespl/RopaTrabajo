@@ -1,0 +1,45 @@
+@media screen {
+@keyframes intro {
+
+  0%   {top: -1000px; opacity: 0};
+  100% {top: 0; opacity: 1};
+}
+
+.cipo-mensajes
+{
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 50px 70px 0 0;  
+}
+
+.cipo-mensajes ul
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cipo-mensajes ul li {
+  
+  width: 100%;
+  z-index: 10000;
+  cursor: pointer;
+  animation: intro 0.5s;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+.cipo-mensajes ul li.success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.cipo-mensajes ul li.danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+}

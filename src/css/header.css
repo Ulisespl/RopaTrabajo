@@ -1,0 +1,43 @@
+/* app.css file */
+@media screen {
+.cipo-navbar
+{
+	background-color: #0A3B2A;
+	/*#048c5c  #043B28*/
+}
+
+.cipo-navbar .dropdown-menu
+{
+	background-color: #F1F9F9;
+}
+.navbar-nav li a
+{
+	color: white !important;
+}
+
+.navbar-nav li div a
+{
+	color: #414143 !important;
+}
+
+.cipo-brand
+{
+	color: #D7E1DB !important;
+	font-size: large;
+	font-weight: bold;
+}
+
+.enc-nav-user
+{
+	right: 20;
+	color: white;
+	font-weight: bold;
+}
+
+.sciicc-nav-warning
+{
+	right: 20;
+	color: red !important;
+	font-weight: bold;
+}
+}

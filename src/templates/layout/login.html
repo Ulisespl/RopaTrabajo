@@ -1,0 +1,39 @@
+<div class="auth-wrapper">
+	<div class="auth-content text-center">
+		
+		<div class="card borderless">
+			<div class="row align-items-center ">
+				<div class="col-md-12">
+					<div class="card-body">
+						<img src="images/Repcom.PNG" alt="" class="img-fluid mb-4">
+						<h4 class="mb-3 f-w-400">Bienvenid@</h4>
+						<hr>
+						<form onSubmit="return false">
+							<div class="form-group mb-3">
+								<input type="text" value="{{ clave }}" class="form-control" id="Clave" placeholder="ClaveTrabajador">
+							</div>
+							<div class="form-group mb-4">
+								<input type="password" value="{{ passwd }}" class="form-control" id="Password" placeholder="Password" required>
+							</div>
+							<p class="mb-2 text-muted">{{merror}}</p>
+
+							<button class="btn btn-block btn-primary mb-4" on-click="doLogin">
+								{{#if Logueando == 1 }}
+									<span class="spinner-border spinner-border-sm" role="status"></span>
+									<span class="load-text">Cargando...</span>
+								{{else}}
+									<span class="btn-text">Ingresar</span>
+								{{/if}}
+							</button>
+						</form>
+
+						<hr/>
+						<p class="mb-2 text-muted">Si olvidaste tu contraseña, favor de solicitar el soporte a través del <a href="{{data.sys.external_links.support.uri}}" target="_blank" class="f-w-400">{{data.sys.external_links.support.title}}</a></p>
+						<br/>
+						<p class="card-text"><small class="text-muted">2023  <b>&sdot;</b> Depto. de T.I. <br/><b>Versión {{ data.sys.version }}</b></small></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,86 @@
+/* app.css file */
+@media screen {
+html
+{
+	height: 100%;
+	font-size: 12px;
+	background-color: white;
+}
+
+body
+{
+	height: calc(100% - 42px);
+}
+
+.app
+{
+	height: 100%;
+}
+
+.sciicc-content
+{
+	height: 100%;
+	margin-top: 42px;
+}
+
+@media only screen and (min-width: 576px) 
+{
+	.sciicc-content div.full
+	{
+		min-height: 100%;
+	}
+}
+
+.show {
+  display: block !important;
+}
+
+.fg-cfe
+{
+	color: #008e5a !important;
+}
+
+.bg-cfe
+{
+	background-color: #008e5a !important;
+}
+
+.bd-cfe
+{
+	border-color: #008e5a !important;
+}
+
+.sciicc-subtitle
+{
+	color: #008e5a !important;
+	margin-bottom: 10px;
+}
+
+.cipo-form
+{
+	padding: 10px;
+	border-radius: 5px;
+	border: solid 1px #efefef;
+	background-color: white;
+	align-content: center;
+}
+
+
+.cipo-input-busqueda
+{
+	border: none;
+	border-bottom: solid 1px white;
+	background: none;
+	color: white;
+	width: calc(100% - 15px);
+}
+
+.cipo-input-busqueda-invitado
+{
+	border: black;
+	border-bottom: solid 1px black;
+	background: none;
+	color: black;
+	width: calc(100% - 15px);
+}
+}

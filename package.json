@@ -1,0 +1,35 @@
+{
+  "name": "Rpt",
+  "version": "1.0.0",
+  "description": "Sistema para la captura de ropa de trabajo",
+  "main": "app.js",
+  "scripts": {
+    "start": "sh build.sh",
+    "test": "build.bat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ulisespl/RopaTrabajo.git"
+  },
+  "keywords": [
+    "porteria"
+  ],
+  "author": "Carla Sánchez",
+  "license": "ISC",
+  "devDependencies": {
+    "@uppy/core": "^1.11.0",
+    "@uppy/webcam": "^1.6.7",
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-html-import-to-string": "0.0.1",
+    "babel-preset-env": "^1.7.0",
+    "moment": "^2.29.1",
+    "ractive": "^0.10.5"
+  },
+  "dependencies": {
+    "chart.js": "^3.8.0",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.7.28"
+  }
+}
