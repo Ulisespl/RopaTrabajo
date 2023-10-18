@@ -27,11 +27,16 @@ let config =
 	},
 	usuarioLog:
 	{
-		Id: '',
-		Nombre: '',
-		Clave: '',
-		Nivel: '',
+		clave: '',
+		Pass: '',
+		Rol: '',
+		Area: '',
+		Nombre: ''
 	},
+	usuarios: [
+		{clave: 'A1234', Pass: 'A1234', Rol: 'Trabajador',		Area: 'División Jalisco',  	Nombre: 'Ulises Alejandro Piña Luna'},
+		{clave: 'B1234', Pass: 'B1234', Rol: 'Administrador', 	Area: 'División Norte', 	Nombre: 'Miriam Alejandra '}
+	]
 };
 
 export default config;

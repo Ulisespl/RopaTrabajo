@@ -4,7 +4,7 @@ import locale_es from "moment/locale/es";
 
 import template from '../../../templates/layout/login.html';
 
-import ActionClass from '../../actions/Action';
+//import ActionClass from '../../actions/Action';
 
 let Login = Ractive.extend (
 { 
@@ -15,10 +15,6 @@ let Login = Ractive.extend (
         lista: null,
         Logueando: null,
         merror: '',
-        Usuario: {
-            Id: null,
-            Contra: null
-        }
 
     }),
     unixtToDate(timestamp) {
@@ -65,48 +61,37 @@ let Login = Ractive.extend (
     verificaUsuario()
     {
 
-        this.set('Usuario.Rpe', this.get('rpe'));
-        this.set('Usuario.Contra', this.get('passwd'));
+        let clave = this.get('clave');
+        let pass = this.get('passwd');
 
-        let Action = new ActionClass();
+        let correcto = this.verificarCredenciales(clave, pass);
 
-        Action.ApiRequest( 'post', `/Rc/Login`, this.get('Usuario') )
-            .then( ( r ) => this.setResultUser( r ) )
-            .catch( ( r ) => this.errorLogin( r ) ); 
-    },
-    setResultUser( result )
-    {
-        if( result.total == 1 )
-        {
-            this.set('data.usuarioLog', result.rows[0]);
-            this.set('merror', '');
+        if (correcto == true){
+
             this.set('Logueando', 0);
             this.set('data.web.islogin', true);
-            this.set( 'data.web.route', 'Inicio' );
+            this.set('data.web.route', 'Inicio' );
 
-            console.log(this.get('data.usuarioLog'));
-            return true;
-
-           
-
-        }
-        else
-        {
-            this.set('merror', result.msj);
+        }else{
+            this.set('merror', 'Usuario incorrecto');
             this.set('data.web.islogin', false);
             this.set('Logueando', 0);
             return false;
         }
     },
-    errorLogin( result )
-    {
-        if( result )
-        {
-            this.set('merror', result.msj);
-            this.set('data.web.islogin', false);
-            this.set('Logueando', 0);
+    verificarCredenciales(usuario, contraseña) {
+        let usuarios = this.get('data.usuarios');
+
+        for (let i = 0; i < usuarios.length; i++) {
+            if (usuarios[i].clave === usuario.toUpperCase() && usuarios[i].Pass === contraseña.toUpperCase()) {
+                this.set('data.usuarioLog', usuarios[i]); 
+                return true;
+            }
         }
-    },
+        return false;
+    }
+
+
 }); 
 
 export default Login;

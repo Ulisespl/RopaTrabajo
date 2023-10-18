@@ -22,14 +22,14 @@
         
         <ul class="nav pcoded-inner-navbar ">
           <li class="nav-item pcoded-menu-caption">
-            <label>Repcom</label>
+            <label>Rpt</label>
           </li>
           <li class="nav-item">
              <a id="Inicio" on-click="changeRoute" href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Inicio</span></a> 
           </li>
           
           <li class="nav-item pcoded-menu-caption">
-            <label>Kavi</label>
+            <label>Elección</label>
           </li>
           {{#each data.usuarioLog.Reportes}}
               {{#if Id_Reporte == 1 && Activo == 1}}
@@ -47,7 +47,7 @@
               
          
 
-          {{#if data.usuarioLog.Nivel == "ADMIN"}}
+          {{#if data.usuarioLog.Rol == "Administrador"}}
               <li class="nav-item pcoded-menu-caption">
                 <label>Administración del Sistema</label>
               </li>
@@ -87,7 +87,7 @@
           </ul>
           <ul class="navbar-nav ml-auto">
             <li>
-              <b>{{ data.usuarioLog.Rpe }} - {{ data.usuarioLog.Nombre }} - {{data.usuarioLog.Nivel}}</b>
+              <b>{{ data.usuarioLog.clave }} - {{ data.usuarioLog.Nombre }} - {{data.usuarioLog.Rol}}/ {{data.usuarioLog.Area}}</b>
             </li>
           </ul>
         </div>

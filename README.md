@@ -11,4 +11,5 @@ Sistema para la eleccion de ropa de trabajo
 
     > sudo npm test  *"windows"*
 
+ 4.- Verificar el proyecto ir a carpeta App/index.nhtml
 
