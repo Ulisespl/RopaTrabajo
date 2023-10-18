@@ -4,8 +4,7 @@ import template from '../../../templates/layout/body.html';
 
 import Inicio from '../modulos/inicio';
 
-import Anomalias from '../modulos/anomalias';
-import KaviRepo from '../modulos/kavirepo';
+import Eleccion from '../modulos/eleccion';
 import AdminUsuarios from '../modulos/adminUsuarios';
 
 let Body = Ractive.extend (
@@ -14,7 +13,7 @@ let Body = Ractive.extend (
     template: template,
     components:
     {
-        Inicio, Anomalias, KaviRepo, AdminUsuarios
+        Inicio, Eleccion, AdminUsuarios
     }
 }); 
 

@@ -31,10 +31,10 @@
           <li class="nav-item pcoded-menu-caption">
             <label>Elección</label>
           </li>
-          {{#each data.usuarioLog.Reportes}}
-              {{#if Id_Reporte == 1 && Activo == 1}}
+
+              {{#if data.usuarioLog.Rol == "Trabajador"}}
                 <li class="nav-item">
-                  <a id="Anomalias" on-click="changeRoute" href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-video"></i></span><span class="pcoded-mtext">Anomalías Kavi</span></a>
+                  <a id="Eleccion" on-click="changeRoute" href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-video"></i></span><span class="pcoded-mtext">Prendas Trabajo</span></a>
                 </li>
               {{/if}}
               {{#if Id_Reporte == 2 && Activo == 1}}
@@ -42,8 +42,6 @@
                   <a id="KaviRepo" on-click="changeRoute" href="#" class="nav-link "><span class="pcoded-micon"><i class="feather icon-video"></i></span><span class="pcoded-mtext">Lect. Optico y Telemed</span></a>
                 </li>
             {{/if}}
-              
-          {{/each}}
               
          
 

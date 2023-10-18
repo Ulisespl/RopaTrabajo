@@ -22,7 +22,6 @@ let Inicio = Ractive.extend (
     tiempoEnPiso(timestamp, timestamp2) {
 
         return Moment.unix(timestamp).locale('es').from(Moment.unix(timestamp2), true);
-        //return Moment.unix(timestamp).locale('es').fromNow();
     },
     tiempoEnPiso2(timestamp) {
 
@@ -34,15 +33,6 @@ let Inicio = Ractive.extend (
     },
     oninit()
     {
-
-        this.zonas();
-        this.tipos();
-        this.estatus();
-        this.agencias();
-        this.municipios();
-        this.colonias();
-        this.subestaciones();
-        this.circuitos();
 
         this.on(
         {
@@ -79,27 +69,6 @@ let Inicio = Ractive.extend (
             if(tipo == 1){
                 this.set('data.web.zonas', result.rows);
             } 
-            if(tipo == 2){
-                this.set('data.web.tipos', result.rows);
-            }
-            if(tipo == 3){
-                this.set('data.web.estatus', result.rows);
-            }
-            if(tipo == 4){
-                this.set('data.web.agencias', result.rows);
-            }
-            if(tipo == 5){
-                this.set('data.web.municipios', result.rows);
-            }
-            if(tipo == 6){
-                this.set('data.web.colonias', result.rows);
-            }
-            if(tipo == 7){
-                this.set('data.web.subestaciones', result.rows);
-            }
-            if(tipo == 8){
-                this.set('data.web.circuitos', result.rows);
-            }
             
             return true;
         }
@@ -118,54 +87,6 @@ let Inicio = Ractive.extend (
             return false;
         }
     },
-    zonas(){
-        this.set('data.web.zonas', '');
-        let url = '/Rd/Zonas';
-
-        this.pruebaGet( url, 1);
-    },
-    tipos(){
-        this.set('data.web.tipos', '');
-        let url = '/Rd/Tipos';
-
-        this.pruebaGet(url, 2);
-    },
-    estatus(){
-        this.set('data.web.estatus', '');
-        let url = '/Rd/Estatus';
-
-        this.pruebaGet(url, 3);
-    },
-    agencias(){
-        this.set('data.web.agencias', '');
-        let url = '/Rd/Agencias';
-
-        this.pruebaGet(url, 4);
-    },
-    municipios(){
-        this.set('data.web.municipios', '');
-        let url = '/Rd/Municipios';
-
-        this.pruebaGet(url, 5);
-    },
-    colonias(){
-        this.set('data.web.colonias', '');
-        let url = '/Rd/Colonias';
-
-        this.pruebaGet(url, 6);
-    },
-    subestaciones(){
-        this.set('data.web.subestaciones', '');
-        let url = '/Rd/Subestaciones';
-
-        this.pruebaGet(url, 7);
-    },
-    circuitos(){
-        this.set('data.web.circuitos', '');
-        let url = '/Rd/Circuitos';
-
-        this.pruebaGet(url, 8);
-    }
 }); 
 
 export default Inicio;
