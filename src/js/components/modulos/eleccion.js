@@ -46,19 +46,11 @@ let Eleccion = Ractive.extend({
                              
                 this.set( 'data.web.route', e.node.id );
             },
-            buscar: () => {
 
-               let desde = this.get('fec_desde');
-               let hasta = this.get('fec_hasta');
-               let zona = this.get('id_zona');
-               let tipo = document.querySelector('#multi_option2').value; 
-
-               let url = `/Rd/Danios/Filtros/${desde}/${hasta}/${zona}/${tipo}`;
-               
-               this.pruebaGet(url, 1); 
-
-
-            },
+            guardarRopa: ( e ) => {
+                console.log( 'Guardar Ropa');
+                
+            }
            
         });
     },

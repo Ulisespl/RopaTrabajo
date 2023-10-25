@@ -29,7 +29,7 @@
                                 <span class="d-block m-t-5">Por favor <code>selecciona las tallas</code> y después da clic en el botón guardar</span>
                             </div>
                             <div class="col-2">
-                                <button on-click="buscar" type="button" class="btn  btn-primary mb-2"> <i class="fa fa-save"></i> &nbsp;&nbsp;<b>Guardar</b></button>
+                                <button data-toggle="modal" data-target="#modalMsj" type="button" class="btn  btn-warning mb-2"> <i class="fa fa-save"></i> &nbsp;&nbsp;<b>Guardar</b></button>
                             &nbsp;&nbsp;
                         
                             </div>
@@ -86,3 +86,20 @@
     </div>
 </div>
 
+<div class="modal fade modalSobrepuesto" tabindex="-1" role="dialog" id="modalMsj" aria-labelledby="modalMsj">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmación de Prendas</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Deseas guardar las elecciones?</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
