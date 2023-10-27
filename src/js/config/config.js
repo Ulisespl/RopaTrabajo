@@ -38,12 +38,13 @@ let config =
 		{clave: 'B1234', Pass: 'B1234', Rol: 'Administrador', 	Area: 'División Norte', 	Nombre: 'Miriam Alejandra '}
 	],
 	prendasSeleccion: [
-		{Cantidad: 1, Articulo: 'CASCO', 	Descripcion: 'CASCO DE SEGURIDAD', 						Modelo: 'LRD55', 		Talla: ''},
-		{Cantidad: 4, Articulo: 'BOTAS', 	Descripcion: 'BOTAS DIELÉCTRICAS', 						Modelo: 'CASQUILLO', 	Talla: ''},
-		{Cantidad: 5, Articulo: 'CAMISOLA', Descripcion: 'CAMISOLA PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: ''},
-		{Cantidad: 4, Articulo: 'PANTALÓN', Descripcion: 'PANTALÓN PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: ''},
-		{Cantidad: 2, Articulo: 'CHAMARRA', Descripcion: 'CHAMARRA PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: ''},
 		{Cantidad: 1, Articulo: 'ANTIAGUA', Descripcion: 'EQUIPO ANTIAGUA PARA PERSONAL DE CAMPO', 	Modelo: 'IMPERMEABLE', 	Talla: ''},
+		{Cantidad: 4, Articulo: 'BOTAS', 	Descripcion: 'BOTAS DIELÉCTRICAS', 						Modelo: 'CASQUILLO', 	Talla: ''},
+		{Cantidad: 2, Articulo: 'CHAMARRA', Descripcion: 'CHAMARRA PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: ''},
+		{Cantidad: 5, Articulo: 'CAMISOLA', Descripcion: 'CAMISOLA PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: ''},
+		{Cantidad: 1, Articulo: 'CASCO', 	Descripcion: 'CASCO DE SEGURIDAD', 						Modelo: 'LRD55', 		Talla: ''},
+		{Cantidad: 4, Articulo: 'PANTALÓN', Descripcion: 'PANTALÓN PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: ''},
+		
 	],
 	tallas1:[
 		{Descripcion: 'Chico'},
