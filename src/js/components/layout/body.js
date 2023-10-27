@@ -5,6 +5,7 @@ import template from '../../../templates/layout/body.html';
 import Inicio from '../modulos/inicio';
 
 import Eleccion from '../modulos/eleccion';
+import Historico from '../modulos/historico';
 import AdminUsuarios from '../modulos/adminUsuarios';
 
 let Body = Ractive.extend (
@@ -13,7 +14,7 @@ let Body = Ractive.extend (
     template: template,
     components:
     {
-        Inicio, Eleccion, AdminUsuarios
+        Inicio, Eleccion, AdminUsuarios, Historico
     }
 }); 
 

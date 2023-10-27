@@ -70,7 +70,48 @@ let config =
 	],
 	tallas3: [
 
-	]
+	],
+	prendasHistorico: [
+		{
+			Año: 2020, Eleccion:	[
+										{Cantidad: 1, Articulo: 'CASCO', 	Descripcion: 'CASCO DE SEGURIDAD', 						Modelo: 'LRD55', 		Talla: 'Mediano'},
+										{Cantidad: 4, Articulo: 'BOTAS', 	Descripcion: 'BOTAS DIELÉCTRICAS', 						Modelo: 'CASQUILLO', 	Talla: '24'},
+										{Cantidad: 5, Articulo: 'CAMISOLA', Descripcion: 'CAMISOLA PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: '27'},
+										{Cantidad: 4, Articulo: 'PANTALÓN', Descripcion: 'PANTALÓN PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: '34'},
+										{Cantidad: 2, Articulo: 'CHAMARRA', Descripcion: 'CHAMARRA PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: '36'},
+										{Cantidad: 1, Articulo: 'ANTIAGUA', Descripcion: 'EQUIPO ANTIAGUA PARA PERSONAL DE CAMPO', 	Modelo: 'IMPERMEABLE', 	Talla: 'Mediano'}
+									]
+		},
+		{
+			Año: 2021, Eleccion:	[
+										{Cantidad: 1, Articulo: 'ANTIAGUA', Descripcion: 'EQUIPO ANTIAGUA PARA PERSONAL DE CAMPO', 	Modelo: 'IMPERMEABLE', 	Talla: 'Mediano'},
+										{Cantidad: 1, Articulo: 'CASCO', 	Descripcion: 'CASCO DE SEGURIDAD', 						Modelo: 'LRD55', 		Talla: 'Mediano'},
+										{Cantidad: 4, Articulo: 'BOTAS', 	Descripcion: 'BOTAS DIELÉCTRICAS', 						Modelo: 'CASQUILLO', 	Talla: '24'},
+										{Cantidad: 5, Articulo: 'CAMISOLA', Descripcion: 'CAMISOLA PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: '28'},
+										{Cantidad: 4, Articulo: 'PANTALÓN', Descripcion: 'PANTALÓN PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: '36'},
+										{Cantidad: 2, Articulo: 'CHAMARRA', Descripcion: 'CHAMARRA PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: '38'},
+										
+									]
+		},
+		{
+			Año: 2022, Eleccion:	[
+										{Cantidad: 5, Articulo: 'CAMISOLA', Descripcion: 'CAMISOLA PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: '29'},
+										{Cantidad: 4, Articulo: 'PANTALÓN', Descripcion: 'PANTALÓN PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: '38'},
+										{Cantidad: 1, Articulo: 'CASCO', 	Descripcion: 'CASCO DE SEGURIDAD', 						Modelo: 'LRD55', 		Talla: 'Mediano'},
+										{Cantidad: 4, Articulo: 'BOTAS', 	Descripcion: 'BOTAS DIELÉCTRICAS', 						Modelo: 'CASQUILLO', 	Talla: '24'},
+										{Cantidad: 2, Articulo: 'CHAMARRA', Descripcion: 'CHAMARRA PARA PERSONAL DE CAMPO', 		Modelo: 'MEZCLILLA', 	Talla: '10'},
+										{Cantidad: 1, Articulo: 'ANTIAGUA', Descripcion: 'EQUIPO ANTIAGUA PARA PERSONAL DE CAMPO', 	Modelo: 'IMPERMEABLE', 	Talla: 'Grande'}
+									]
+		},
+
+	],
+	exports:
+	{
+		excelRopa:
+		{
+			headers: ['No', 'Cantidad',	'Articulo',	'Descripcion',	'Modelo',	'Talla']
+		}
+	}
 
 };
 

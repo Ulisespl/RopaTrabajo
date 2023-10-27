@@ -1,0 +1,83 @@
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Historial de Elecciones:</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#!">Página de historial de elecciones de ropa de trabajo</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <!-- [ Main Content ] start -->
+        <div class="row">
+
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-7">
+                                <h5>Tus prendas están aquí: </h5>
+                                <span class="d-block m-t-5">Por favor <code>selecciona el año</code> y después da clic en el botón buscar</span>
+                            </div>
+                            <div class="col-2">
+                                <select class="form-control " value="{{ anioEle }}">
+                                    <option value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                </select>
+                            </div>
+                            <div class="col-1">
+                                <button  on-click="Consultar" type="button" class="btn  btn-success mb-2">  &nbsp;&nbsp;<b>Buscar</b></button>&nbsp;&nbsp;
+                            </div>
+                            <div class="col-2">
+                                <button  on-click="Descargar" type="button" class="btn  btn-warning mb-2"> <i class="fa fa-arrow-alt-circle-down"></i> &nbsp;&nbsp;<b>Descargar</b></button>&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="card-body table-border-style">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr style="text-align: center !important; font-size: 15px !important;">
+                                        <th>#</th>
+                                        <th>Cantidad</th>
+                                        <th>Articulo</th>
+                                        <th>Descripción</th>
+                                        <th>Modelo</th>
+                                        <th>Talla</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each ropa:num}}
+                                        <tr style="text-align: center !important; font-size: 15px !important;">
+                                            <td>{{num+1}}</td>
+                                            <td>{{Cantidad}}</td>
+                                            <td>{{Articulo}}</td>
+                                            <td>{{Descripcion}}</td>
+                                            <td>{{Modelo}}</td>
+                                            <td>{{Talla}}</td>
+                                        </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+          
+        </div>
+        <!-- [ Main Content ] end -->
+    </div>
+</div>
