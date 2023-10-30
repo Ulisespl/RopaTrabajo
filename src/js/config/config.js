@@ -34,8 +34,11 @@ let config =
 		Nombre: ''
 	},
 	usuarios: [
-		{clave: 'A1234', Pass: 'A1234', Rol: 'Trabajador',		Area: 'División Jalisco',  	Nombre: 'Ulises Alejandro Piña Luna'},
-		{clave: 'B1234', Pass: 'B1234', Rol: 'Administrador', 	Area: 'División Norte', 	Nombre: 'Miriam Alejandra '}
+		{clave: 'A1234', Pass: 'A1234', Rol: 'Trabajador',		Area: 'División Jalisco',  	status: 'Activo', Nombre: 'Ulises Alejandro Piña Luna'},
+		{clave: 'B1234', Pass: 'B1234', Rol: 'Administrador', 	Area: 'División Norte', 	status: 'Activo', Nombre: 'Miriam Alejandra Becerra Castro'},
+		{clave: 'C1234', Pass: 'C1234', Rol: 'Jefatura', 		Area: 'División Jalisco', 	status: 'Activo', Nombre: 'Jose Luis Rodriguez '},
+		{clave: 'D1234', Pass: 'D1234', Rol: 'Trabajador', 		Area: 'División Bajio', 	status: 'Activo', Nombre: 'Arturo Asnalla Perez '},
+		{clave: 'E1234', Pass: 'E1234', Rol: 'Administrador', 	Area: 'División Sur', 		status: 'Activo', Nombre: 'Abimael Hernandez Sanchez '}
 	],
 	prendasSeleccion: [
 		{Cantidad: 1, Articulo: 'ANTIAGUA', Descripcion: 'EQUIPO ANTIAGUA PARA PERSONAL DE CAMPO', 	Modelo: 'IMPERMEABLE', 	Talla: ''},
@@ -112,7 +115,7 @@ let config =
 		{
 			headers: ['No', 'Cantidad',	'Articulo',	'Descripcion',	'Modelo',	'Talla']
 		}
-	}
+	},
 
 };
 

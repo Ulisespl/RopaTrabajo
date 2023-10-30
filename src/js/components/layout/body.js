@@ -6,7 +6,7 @@ import Inicio from '../modulos/inicio';
 
 import Eleccion from '../modulos/eleccion';
 import Historico from '../modulos/historico';
-import AdminUsuarios from '../modulos/adminUsuarios';
+import Roles from '../modulos/roles';
 
 let Body = Ractive.extend (
 { 
@@ -14,7 +14,7 @@ let Body = Ractive.extend (
     template: template,
     components:
     {
-        Inicio, Eleccion, AdminUsuarios, Historico
+        Inicio, Eleccion, Historico, Roles
     }
 }); 
 
