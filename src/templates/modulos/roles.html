@@ -75,18 +75,62 @@
 </div>
 
 <div class="modal fade modalSobrepuesto" tabindex="-1" role="dialog" id="modalDetalles" aria-labelledby="modalMsj">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Detalles del Trabajador</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
-                <p>¿Deseas guardar las elecciones?</p>
+                <div class="row">
+                    <div class="input-group input-group-sm mb-3 col-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Clave</span>
+                        </div>
+                        <input size="5" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" disabled value="{{modiUsuario.clave}}">
+                    </div>
+                    <div class="input-group input-group-sm mb-3 col-8">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="{{modiUsuario.Nombre}}">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group input-group-sm mb-3 col-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Area</span>
+                        </div>
+                        <input size="5" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" value="{{modiUsuario.Area}}">
+                    </div>
+
+                    <div class="input-group input-group-sm mb-3 col-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Estatus</span>
+                        </div>
+                        <select class="form-control flex-grow-1" value="{{modiUsuario.status}}">
+                                <option value="Activo">Activo</option>
+                                <option value="Inactivo">Inactivo</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group input-group-sm mb-3 col-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-sm">Rol</span>
+                        </div>
+                        <select class="form-control flex-grow-1" value="{{modiUsuario.Rol}}">
+                                <option value="Trabajador">Trabajador</option>
+                                <option value="Administrador">Administrador</option>
+                                <option value="Jefatura">Jefatura</option>
+                        </select>
+                    </div>
+                </div>
             </div>
 
+
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                <button  on-click="modUsuario"  type="button" class="btn btn-primary">Modificar Usuario</button>
             </div>
         </div>
     </div>

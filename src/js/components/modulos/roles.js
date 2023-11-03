@@ -11,12 +11,7 @@ let Roles = Ractive.extend({
     template: template,
     data: () => ({
         current: null,
-        fec_desde: null,
-        fec_hasta: null,
-        id_zona: null, 
-        zonasPaso: null,
-        listaDanios: null,
-        danioPaso: null,
+        modiUsuario: null,
 
     }),
     methods: {
@@ -50,8 +45,22 @@ let Roles = Ractive.extend({
             getUsuario: ( e ) => {
 
                 let id = e.node.id;
-                console.log( id);
                 
+                this.set('modiUsuario', this.encontrarUsuarioPorClave(id));
+
+            },
+            modUsuario: (e) => {
+                let usuario = this.get('modiUsuario');
+
+                let indice = this.encontrarIndicePorClave(usuario.clave);
+
+                this.set(`data.usuarios[${indice}].Nombre`, usuario.Nombre);
+                this.set(`data.usuarios[${indice}].status`, usuario.status);
+                this.set(`data.usuarios[${indice}].Area`, usuario.Area);
+                this.set(`data.usuarios[${indice}].Rol`, usuario.Rol);
+
+                $('#modalDetalles').modal('hide');
+
             }
            
         });
@@ -93,7 +102,21 @@ let Roles = Ractive.extend({
             return false;
         }
     },
-        
+    encontrarUsuarioPorClave(clave) {
+
+        let usuarios = this.get('data.usuarios');
+    
+        const usuarioEncontrado = usuarios.find(usuario => usuario.clave === clave);
+    
+        return usuarioEncontrado || null;
+    },
+    encontrarIndicePorClave(clave) {
+        const usuarios = this.get('data.usuarios');
+
+        const indice = usuarios.findIndex(usuario => usuario.clave === clave);
+    
+        return indice;
+    }
 }
 )
 
